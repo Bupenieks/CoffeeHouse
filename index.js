@@ -45,18 +45,16 @@ app.get('/test/', (req, res) => {
     var options = {
         mode: 'text',
         pythonOptions: ['-u'],
-        args: ['']
+        args: ['./exports', './users/user1/repoId/e.mp3', './users/user1/repoId/f.mp3']
     }
 
-    vcs.createNewProfile("user1")
+   /* vcs.createNewProfile("user1")
     vcs.createNewProfile("user2")
     vcs.createNewRepo("user1", "repoId")
-    vcs.cloneRepo("user1", "repoId", "user2")
+    vcs.cloneRepo("user1", "repoId", "user2")*/
 
 
-
-
-    PythonShell.run('test.py', options, (err, results) => {
+    PythonShell.run('gitMusic.py', options, (err, results) => {
         console.log(results);
         res.send(results)
     })
