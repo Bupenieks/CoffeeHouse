@@ -1,16 +1,79 @@
-<%- include components/header.ejs %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  	<link href="css/explore.css" rel="stylesheet">
+  	<link href="css/style1.css" rel="stylesheet">
+  	<script src="https://use.fontawesome.com/0e6a1b4153.js"></script>
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin:500,400" rel="stylesheet">
+    <script src="https://use.fontawesome.com/0e6a1b4153.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--<script src="scripts/script.js"></script>-->
+    <script type="text/javascript" src="javascripts/projectPlayer.js"></script>
+    <link rel="stylesheet" href="css/projectPlayerAudio.css">
+    <link rel="stylesheet" href="css/projectPlayerReset.css">
+  	<title>Project Page</title>
+  </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+      <!-- Navbar content -->
+      <a class="navbar-brand ml-5" href="#">ComposeHub</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Explore</a>
+          </li>
+        </ul>
+        <form class="form-inline my-4 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
+          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+        </form>
+        <ul class="navbar-nav mr-auto navbar-right">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Activity <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mr-5" href="#">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-10">
         <div class="song">
           <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-          <div class="player shadow mt-2">
-            <h2>Song Title</h2>
-            <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" autoplay="autoplay" controls="controls"></audio>
+          <div class="player shadow mt-2" style="height: 225px;">
+            <h2 class="projectTitle">Song Title</h2>
+            <h5 class="projectOwnerUsername">Username</h5>
+            <!--HTML5 audio-->
+            <audio id="music" preload="true">
+              <source src="uploads/bryson1.mp3">
+            </audio>
+
+            <div id="wrapper">
+              <!--Audio Player Interface-->
+              <div id="audioplayer">
+                <button id="pButton" class="play"></button>
+                <div id="timeline">
+                  <div id="playhead"></div>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button>
         </div>
       </div>
       <div class="col-md-1"></div>
