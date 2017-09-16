@@ -134,7 +134,7 @@ a:hover, a:visited, a:link, a:active, a:visited:hover {
   height: 80px;
 }
 
-input 				{
+input:not(.baseFileUpload)				{
   background-color: #fbfbfb;
   font-size:20px;
   font-family: 'Roboto', sans-serif;
