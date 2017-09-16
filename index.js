@@ -3,20 +3,27 @@
 const http = require('http'),
     express = require('express'),
     path = require('path'),
-    siofu = require("socketio-file-upload");
+		logger = require('morgan'),
+    // cookieParser = require('cookie-parser'),
+    siofu = require("socketio-file-upload"),
+		bodyParser = require('body-parser'),
+    index = require('./routes/index'),
+    fileUpload = require('./routes/fileUpload');
 
 const app = express().use(siofu.router),
-    server = http.Server(app);
+			server = http.Server(app);
 
+app.use(logger('dev'));
 
-
-app.set('port', process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, 'public')));
-app.set('view engine', 'html');
+app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(cookieParser());
+app.set('port', process.env.PORT || 3000);
+app.set('view engine', 'ejs');
 
-server.listen(app.get('port'), () => {
-    console.log('Express server listening on port ' + app.get('port'));
-});
+app.use('/', index);
+app.use('/fileUpload', fileUpload);
+
 /*
 io.on("connection", function(socket){
     var uploader = new siofu();
@@ -46,9 +53,12 @@ app.get('/test/', (req, res) => {
 
 })
 
-
-
+server.listen(app.get('port'), () => {
+    console.log('Express server listening on port ' + app.get('port'));
+});
 
 app.use((req, res) => {
     res.status(404).send({ url: req.url });
 });
+
+module.exports = app;
