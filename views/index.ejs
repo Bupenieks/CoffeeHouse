@@ -6,13 +6,14 @@
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link href="css/explore.css" rel="stylesheet">
+	<link href="../public/css/explore.css" rel="stylesheet">
+	<link href="../public/css/style1.css" rel="stylesheet">
 	<title>Explore Page</title>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  <!-- Navbar content -->
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="#">ComposeHub</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -32,12 +33,12 @@
 				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
 				<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
 			</form>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Message</a>
+			<ul class="navbar-nav mr-auto navbar-right">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Profile</a>
+					<a class="nav-link" href="#">Explore</a>
 				</li>
 			</ul>
 		</div>
@@ -45,62 +46,104 @@
 	<div class="container">
 		<div class="row">
 			<!-- <div class="col-1"></div> -->
-			<div class="col-7">
+			<div class="col-7 mt-3">
 				<h3 id="explore-header">The trending songs.</h3>
-				<div class="card">
-				  <div class="card-body">
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				  </div>
-				</div>
-				<div class="card">
-				  <div class="card-body">
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				  </div>
-				</div>
-				<div class="card">
-				  <div class="card-body">
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				  </div>
-				</div>
-				<div class="card">
-				  <div class="card-body">
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				  </div>
-				</div>
-				<div class="card">
-				  <div class="card-body">
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				  </div>
-				</div>
-				<div class="card">
-				  <div class="card-body">
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				    This is some text within a card block.
-				  </div>
-				</div>
+				<hr><br>
+
+					<!-- Song Card -->
+					  <div class="row">
+					    <div class="col-md-12">
+					      <div class="song">
+					      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
+					      <div class="player shadow mt-2">
+					        <h2>Song Title</h2>
+					        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" autoplay="autoplay" controls="controls"></audio>
+					      </div>
+					      <button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button>
+					    </song>
+					    </div>
+					</div>
+					</div>
+					<!-- End Song Card -->
+
+					<!-- Song Card -->
+						<div class="row mt-4">
+							<div class="col-md-12">
+								<div class="song">
+								<h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
+								<div class="player shadow mt-2">
+									<h2>Another Song</h2>
+									<audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" autoplay="autoplay" controls="controls"></audio>
+								</div>
+								<button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button>
+							</song>
+							</div>
+					</div>
+					</div>
+					<!-- End Song Card -->
+					<!-- Song Card -->
+						<div class="row mt-4">
+							<div class="col-md-12">
+								<div class="song">
+								<h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
+								<div class="player shadow mt-2">
+									<h2>Next Song</h2>
+									<audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" autoplay="autoplay" controls="controls"></audio>
+								</div>
+								<button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button>
+							</song>
+							</div>
+					</div>
+					</div>
+					<!-- End Song Card --><!-- Song Card -->
+					  <div class="row mt-4">
+					    <div class="col-md-12">
+					      <div class="song">
+					      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
+					      <div class="player shadow mt-2">
+					        <h2>A Third Song</h2>
+					        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" autoplay="autoplay" controls="controls"></audio>
+					      </div>
+					      <button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button>
+					    </song>
+					    </div>
+					</div>
+					</div>
+					<!-- End Song Card --><!-- Song Card -->
+					  <div class="row mt-4">
+					    <div class="col-md-12">
+					      <div class="song">
+					      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
+					      <div class="player shadow mt-2">
+					        <h2>A Third Song</h2>
+					        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" autoplay="autoplay" controls="controls"></audio>
+					      </div>
+					      <button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button>
+					    </song>
+					    </div>
+					</div>
+					</div>
+					<!-- End Song Card --><!-- Song Card -->
+					  <div class="row mt-4">
+					    <div class="col-md-12">
+					      <div class="song">
+					      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
+					      <div class="player shadow mt-2">
+					        <h2>A Third Song</h2>
+					        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" autoplay="autoplay" controls="controls"></audio>
+					      </div>
+					      <button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button>
+					    </song>
+					    </div>
+					</div>
+					</div>
+					<!-- End Song Card -->
 			</div>
 			<div class="col-1">
 			</div>
 			<div class="col-4" id="project-sidebar">
-				<div class="card" style="flex-direction: row; justify-content: end;">
-					<h4 class="card-title" style="width: 50%">Your Projects</h4>
+				<div class="card mb-3" style="flex-direction: row; justify-content: end;">
+					<h4 class="card-title yourProjects" style="width: 50%;padding:5px;">Your Projects</h4>
 					<a href="#" class="pull-right" style="width: 40%">New Project</a>
 				</div>
 				<div class="card">

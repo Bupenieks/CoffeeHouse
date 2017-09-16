@@ -1,0 +1,178 @@
+.header {
+  background-image: url('../wall.jpg');
+  height: 600px;
+}
+
+.exploreHeader {
+  background-image: url('../wall.jpg');
+  height: 400px;
+}
+
+.exploreCategory {
+  color: #333;
+}
+
+.logoText {
+  margin-top: 0px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.logo {
+  margin-top: 170px;
+}
+
+.exploreLogo {
+  margin-top: 130px;
+}
+
+.fa-fire {
+  float: left;
+}
+
+.landingLogin {
+  float: right;
+  margin-right: 20px;
+}
+
+.loginbar {
+  color: #000;
+  height: 60px;
+  background-color: #082129;
+  width: 100%;
+  float: right;
+}
+
+.signup {
+  margin-top: 70px;
+}
+
+.signupLogin {
+  float: right;
+  color: #fff;
+  margin-right: 9%;
+  margin-top: 15px;
+}
+
+.signupHome {
+  float: left;
+  color: #fff;
+  margin-left: 9%;
+  margin-top: 15px;
+}
+
+.signup h4 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.song {
+  width: 100%;
+}
+
+.song h6 {
+  color: #aaa;
+}
+
+.player h2 {
+  color: #333;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.player {
+  width: 100%;
+  background-color: #fff;
+  height: 95px;
+  border-radius: 0.75em;
+}
+
+.audioPlayer {
+  width: 100%;
+  height: 40%;
+}
+
+.logoDescription {
+  margin-top: px;
+  font-weight: 400;
+  font-size: 25px;
+  min-width: 440px;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features {
+  background-color: #fff;
+  width: 100%;
+  height: 750px;
+}
+
+.button
+
+h1, h2 {
+  font-family: 'Cabin', sans-serif;
+  color: #fff;
+}
+
+.signup h1 {
+  font-family: 'Cabin', sans-serif;
+  color: #000;
+}
+
+.footer {
+  color: #ccc;
+  margin-top: 150px;
+}
+
+a:hover, a:visited, a:link, a:active, a:visited:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar {
+  height: 80px;
+}
+
+input 				{
+  background-color: #fff;
+  font-size:20px;
+  font-family: 'Roboto', sans-serif;
+  padding:10px 10px 0px 5px;
+  display:block;
+  width: 100%;
+  border:none;
+  border-bottom:4px solid #ddd;
+}
+input:focus { outline:none; }
+
+input::placeholder {
+  color: #ddd;
+}
+
+input:focus::-webkit-input-placeholder
+{
+    color: transparent;
+}
+
+form  {
+    width: 100%;
+}
+
+.shadow {
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.lshadow {
+  box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.wrap { width: 560px; padding: 20px; }
+
+.yourProjects {
+  margin-top: 10px;
+  margin-left: 5px;
+}
