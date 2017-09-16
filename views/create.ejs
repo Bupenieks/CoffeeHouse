@@ -45,11 +45,13 @@
   </div><br><br>
   <div class="form-group">
     <label for="exampleInputEmail1">Sound File:</label><br>
-    <input type="file" class="baseFileUpload" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+    <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
   </div>
   <div class="mt-5">
-    <button type="submit" class="btn btn-outline-primary btn-lg mt-5">Sign Up</button>
+    <button class="btn btn-lg upload-btn" type="button">Upload File</button>
   </div>
   </div>
 
 </form>
+<script src="javascripts/upload.js"></script>
+<% include components/footer.ejs %>
