@@ -11,7 +11,9 @@ const http = require('http'),
     fileUpload = require('./routes/fileUpload'),
     home = require('./routes/home'),
     project = require('./routes/project'),
-    vcs = require('./lib/version_control.js');
+    vcs = require('./lib/version_control.js'),
+    create = require('./routes/create'),
+    profile = require('./routes/profile');
 
 const app = express().use(siofu.router),
 			server = http.Server(app);
@@ -28,6 +30,8 @@ app.use('/', index);
 app.use('/upload', fileUpload);
 app.use('/home', home);
 app.use('/project', project);
+app.use('/create', create);
+app.use('/profile', profile);
 
 /*
 io.on("connection", function(socket){

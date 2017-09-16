@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music App</title>
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="../public/css/style1.css">
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <link href="https://fonts.googleapis.com/css?family=Cabin:500,400" rel="stylesheet">
-  <script src="https://use.fontawesome.com/0e6a1b4153.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="scripts/script.js"></script>
-</head>
-<body>
+<% include components/header.ejs %>
   <div class="loginbar">
     <p class="signupHome"><a href="landing.ejs">Home</a></p>
     <p class="signupLogin"><a href="login.ejs">Login</a></p>
@@ -43,6 +29,4 @@
     </div>
   </form>
   </div>
-
-</body>
-</html>
+<% include components/footer.ejs %>
