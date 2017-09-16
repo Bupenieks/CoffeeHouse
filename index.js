@@ -9,7 +9,8 @@ const http = require('http'),
 		bodyParser = require('body-parser'),
     index = require('./routes/index'),
     fileUpload = require('./routes/fileUpload'),
-    vcs = require('./lib/version_control.js')
+    home = require('./routes/home'),
+    vcs = require('./lib/version_control.js');
 
 const app = express().use(siofu.router),
 			server = http.Server(app);
@@ -24,6 +25,7 @@ app.set('view engine', 'ejs');
 
 app.use('/', index);
 app.use('/fileUpload', fileUpload);
+app.use('/home', home);
 
 /*
 io.on("connection", function(socket){

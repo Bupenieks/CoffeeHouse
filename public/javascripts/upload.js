@@ -7,7 +7,7 @@ $('.upload-btn').on('click', function (){
 $('#upload-input').on('change', function(){
 
     var files = $(this).get(0).files;
-
+    console.log('on upload input change');
     if (files.length > 0){
         // create a FormData object which will be sent as the data payload in the
         // AJAX request
@@ -20,6 +20,8 @@ $('#upload-input').on('change', function(){
             // add the files to formData object for the data payload
             formData.append('uploads[]', file, file.name);
         }
+
+        console.log('-----formData: ', formData);
 
         $.ajax({
             url: '/upload',
