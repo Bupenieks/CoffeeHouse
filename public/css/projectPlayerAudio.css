@@ -1,0 +1,81 @@
+/* Absolute Center */
+.abs-center{
+	margin: auto;
+	position: fixed;
+	top:0; right:0; bottom:0; left:0;
+}
+/*Container for audio player*/
+#audioplayer{
+	width: 100%;
+	height: 200px;
+	margin: auto;
+	margin-top: 0px;
+	/*border: solid;*/
+}
+/* Play/Pause Button */
+#pButton{
+	height: 120px;
+	width: 120px;
+	border: none;
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	float:left;
+	outline:none;
+  /*margin-top: 75px;*/
+	margin-top: -15px;
+	margin-left: 25px;
+
+}
+/*Classes for play/pause button background*/
+.play{background: url('../images/play.png') ;}
+.pause{background: url('../images/pause.png') ;}
+
+#timeline{
+	width: 80%;
+	height: 40px;
+	background: rgba(0,0,0,.3);
+	margin-top: 66px;
+  margin-left: 16px;
+	float: left;
+	border-radius: 15px;
+}
+/*Grabable Playhead*/
+#playhead{
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	margin-top: 7px;
+	background: black;
+}
+
+
+#gutter{
+	width: 400px;
+	height: 20px;
+	background: #4200f7;
+	margin-top: 20px;
+	float: left;
+	border-radius: 15px;
+}
+/*Grabable Handle*/
+#handle{
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background: rgba(0, 255, 196, 0.82);
+}
+
+.projectTitle {
+	font-size: 36px;
+	padding-left: 14% !important;
+	padding-top: 3% !important;
+}
+
+.projectOwnerUsername {
+	padding-left: 14% !important;
+	padding-top: 2% !important
+}
