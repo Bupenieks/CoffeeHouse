@@ -8,14 +8,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Explore</a>
+        <a class="nav-link mr-4" href="/home">Home <span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-4 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
+      <input class="form-control mr-sm-2 search" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
       <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
     </form>
     <ul class="navbar-nav mr-auto navbar-right">
@@ -50,8 +47,8 @@
   <div class="mt-5">
     <button class="btn btn-lg upload-btn" type="button">Upload File</button>
   </div>
+  <% include components/footer.ejs %>
   </div>
 
 </form>
 <script src="javascripts/upload.js"></script>
-<% include components/footer.ejs %>
