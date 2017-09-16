@@ -13,7 +13,9 @@ const http = require('http'),
     project = require('./routes/project'),
     vcs = require('./lib/version_control.js'),
     create = require('./routes/create'),
-    profile = require('./routes/profile');
+    profile = require('./routes/profile'),
+    signup = require('./routes/signup'),
+    login = require('./routes/login');
 
 const app = express().use(siofu.router),
 			server = http.Server(app);
@@ -32,6 +34,8 @@ app.use('/home', home);
 app.use('/project', project);
 app.use('/create', create);
 app.use('/profile', profile);
+app.use('/signup', signup);
+app.use('/login', login);
 
 /*
 io.on("connection", function(socket){
