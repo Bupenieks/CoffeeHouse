@@ -3,23 +3,27 @@
 <div class="header">
   <br>
   <p class="landingLogin"><a href="/login">Login</a></p>
+  <div class="container">
   <div class="logo">
-    <h1 class="logoText text-center">Coffee House</h1>
-    <h2 class="logoDescription text-center">Compose, collaborate, and explore a growing library of open-source music.</h2>
+    <img class="logoImg" src="coffeehouselogo.png">
+    <h1 class="logoText text-left mt-5">Coffee House</h1>
+    <h2 class="logoDescription text-left">Compose, collaborate, and explore a growing library of open-source music.</h2>
+    <div class="buttonWrapper mt-5">
+      <a href="/signup"><button type="button" class="btn btn-primary btn-lg">Sign Up</button></a>
+      <a href="/home"><button type="button" class="btn btn-outline-secondary btn-lg ml-3 ">Explore</button></a>
   </div>
-  <div class="buttonWrapper mt-5">
-    <a href="/signup"><button type="button" class="btn btn-primary btn-lg">Sign Up</button></a>
-    <a href="/home"><button type="button" class="btn btn-outline-secondary btn-lg ml-3 ">Explore</button></a>
+  </div>
 </div>
+
 </div>
-<div class="features mt-5">
-  <div class="container mt-5">
-    <div class="rows mt-5">
+<div class="features">
+  <div class="container">
+    <div class="rows">
       <div class="row">
-        <div class="col-md-2 col-md-offset">
+        <div class="col-md-2 col-md-offset mt-5">
           <i class="fa fa-5x fa-pencil" aria-hidden="true"></i>
         </div>
-        <div class="col-md-10 col-sm-10">
+        <div class="col-md-10 col-sm-10 mt-5">
           <h3>Compose</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
         </div>
@@ -44,6 +48,6 @@
       </div>
     </div>
     <div class="buttonWrapper mt-5">
-      <button type="button" class="btn btn-outline-primary btn-lg">Get Started</button>
+      <a href="/home"><button type="button" class="btn btn-outline-primary btn-lg">Get Started</button></a>
   </div>
   <% include components/footer.ejs %>
