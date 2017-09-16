@@ -175,4 +175,22 @@ form  {
 .yourProjects {
   margin-top: 10px;
   margin-left: 5px;
+  width: 100%;
+}
+
+.sidebarTime {
+  float: right;
+  color: #bbb;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+}
+
+.card span {
+  color: #333;
 }

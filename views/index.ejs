@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link href="../public/css/explore.css" rel="stylesheet">
-	<link href="../public/css/style1.css" rel="stylesheet">
-	<title>Explore Page</title>
-</head>
+<% include components/header.ejs %>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  <!-- Navbar content -->
@@ -25,9 +14,6 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">Explore</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
-				</li>
 			</ul>
 			<form class="form-inline my-4 my-lg-0">
 				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
@@ -35,10 +21,10 @@
 			</form>
 			<ul class="navbar-nav mr-auto navbar-right">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="#">Activity <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Explore</a>
+					<a class="nav-link" href="#">Profile</a>
 				</li>
 			</ul>
 		</div>
@@ -46,8 +32,9 @@
 	<div class="container">
 		<div class="row">
 			<!-- <div class="col-1"></div> -->
-			<div class="col-7 mt-3">
-				<h3 id="explore-header">The trending songs.</h3>
+			<div class="col-8 mt-3">
+
+				<h3 id="explore-header"><i class="fa fa-fire mr-3" aria-hidden="true"></i> The trending songs.</h3>
 				<hr><br>
 
 					<!-- Song Card -->
@@ -90,7 +77,7 @@
 									<h2>Next Song</h2>
 									<audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" autoplay="autoplay" controls="controls"></audio>
 								</div>
-								<button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button>
+								<button type="button" class="btn btn-outline-primary btn-sm mt-4">View History</button> <!-- Link using data-id:song.id -->
 							</song>
 							</div>
 					</div>
@@ -141,30 +128,39 @@
 			</div>
 			<div class="col-1">
 			</div>
-			<div class="col-4" id="project-sidebar">
-				<div class="card mb-3" style="flex-direction: row; justify-content: end;">
-					<h4 class="card-title yourProjects" style="width: 50%;padding:5px;">Your Projects</h4>
+			<div class="col-3" id="project-sidebar">
+				<div style="flex-direction: row; justify-content: end;">
+					<h4 class="card-title yourProjects" style="padding:5px;">Your Projects</h4>
 					<a href="#" class="pull-right" style="width: 40%">New Project</a>
 				</div>
 				<div class="card">
-					<div class="card-body">
-						This is some text within a card block.
+					<a href="#">
+						<div class="card-body">
+						<span>Song 1</span>
+						<span class="sidebarTime">5:01</span>
 					</div>
-				</div>
-				<div class="card">
-					<div class="card-body">
-						This is some text within a card block.
+				</a>
+				</div><div class="card">
+					<a href="#">
+						<div class="card-body">
+						<span>Song 2</span>
+						<span class="sidebarTime">5:01</span>
 					</div>
-				</div>
-				<div class="card">
-					<div class="card-body">
-						This is some text within a card block.
+				</a>
+				</div><div class="card">
+					<a href="#">
+						<div class="card-body">
+						<span>Song 3</span>
+						<span class="sidebarTime">5:01</span>
 					</div>
-				</div>
-				<div class="card">
-					<div class="card-body">
-						This is some text within a card block.
+				</a>
+				</div><div class="card">
+					<a href="#">
+						<div class="card-body">
+						<span>Song 4</span>
+						<span class="sidebarTime">5:01</span>
 					</div>
+				</a>
 				</div>
 			</div>
 		</div>
