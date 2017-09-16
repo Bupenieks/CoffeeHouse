@@ -8,7 +8,8 @@ const http = require('http'),
     siofu = require("socketio-file-upload"),
 		bodyParser = require('body-parser'),
     index = require('./routes/index'),
-    fileUpload = require('./routes/fileUpload');
+    fileUpload = require('./routes/fileUpload'),
+    vcs = require('./lib/version_control.js')
 
 const app = express().use(siofu.router),
 			server = http.Server(app);
@@ -44,6 +45,13 @@ app.get('/test/', (req, res) => {
         pythonOptions: ['-u'],
         args: ['']
     }
+
+    vcs.createNewProfile("user1")
+    vcs.createNewProfile("user2")
+    vcs.createNewRepo("user1", "repoId")
+    vcs.cloneRepo("user1", "repoId", "user2")
+
+
 
 
     PythonShell.run('test.py', options, (err, results) => {
