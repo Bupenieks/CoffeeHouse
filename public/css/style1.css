@@ -1,3 +1,7 @@
+body {
+  background-color: #fbfbfb;
+}
+
 .header {
   background-image: url('../wall.jpg');
   height: 600px;
@@ -66,13 +70,6 @@
   font-size: 20px;
 }
 
-.song {
-  width: 100%;
-}
-
-.song h6 {
-  color: #aaa;
-}
 
 .player h2 {
   color: #333;
@@ -193,4 +190,26 @@ form  {
 
 .card span {
   color: #333;
+}
+
+.createProject {
+  margin-top: 0px !important;
+}
+
+.btn-outline-info {
+  border-color: #082129;
+  color: #082129;
+}
+
+.btn-outline-info:hover {
+  background-color: #082129;
+}
+
+.createProject {
+  width: 100%;
+}
+
+.trendingDivider {
+  background-color: #004289;
+  height: 1px;
 }
