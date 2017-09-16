@@ -17,6 +17,7 @@
     <script type="text/javascript" src="javascripts/projectPlayer.js"></script>
     <link rel="stylesheet" href="css/projectPlayerAudio.css">
     <link rel="stylesheet" href="css/projectPlayerReset.css">
+    <link rel="stylesheet" href="css/project.css">
   	<title>Project Page</title>
   </head>
   <body>
@@ -29,14 +30,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Explore</a>
-          </li>
+            <a class="nav-link mr-4" href="/home">Home <span class="sr-only">(current)</span></a>
         </ul>
         <form class="form-inline my-4 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
+          <input class="form-control mr-sm-2 search" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
           <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
         </form>
         <ul class="navbar-nav mr-auto navbar-right">
@@ -49,15 +46,20 @@
         </ul>
       </div>
     </nav>
+    <div class="container">
+      <div class="row">
+      <h1 class="pTitle">Project Title</h1><a href="/create">
+      <a href="/create?id:"><button type="button" class="btn btn-outline-primary mt-5 ml-3 cloneButton">Clone this Project</button></a><br>
+    </div>
+    <br><br>
 
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
+    <div class="row mt-4">
+      <div class="col-md-12">
         <div class="song">
           <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-          <div class="player shadow mt-2" style="height: 225px;">
+          <div class="player gshadow mt-3" style="height: 200px;">
             <h2 class="projectTitle">Song Title</h2>
-            <h5 class="projectOwnerUsername">Username</h5>
+            <h5 class="projectOwnerUsername">Username</h5><br>
             <!--HTML5 audio-->
             <audio id="music" preload="true">
               <source src="uploads/bryson1.mp3">
@@ -74,14 +76,93 @@
             </div>
 
           </div>
+        </div><br></div></div>
+        <h1 class="pComposed">Project History</h1><hr>
+        <div class="row">
+          <!-- Component Section -->
+          <div class="col-md-12">
+            <div class="song">
+              <h6 class="mt-3">Contributed by [user]</h6>
+              <div class="player shadow mt-3" style="height: 200px;">
+                <h2 class="projectTitle">Segment 1</h2>
+                <h5 class="projectOwnerUsername">[user]</h5><br>
+                <!--HTML5 audio-->
+                <audio id="music" preload="true">
+                  <source src="uploads/bryson1.mp3">
+                </audio>
+
+                <div id="wrapper">
+                  <!--Audio Player Interface-->
+                  <div id="audioplayer">
+                    <button id="pButton" class="play"></button>
+                    <div id="timeline">
+                      <div id="playhead"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><br></div>
+            <!-- End Component -->
+            <!-- Component Section -->
+            <div class="col-md-12 mt-4">
+              <div class="song">
+                <h6 class="mt-3">Contributed by [user]</h6>
+                <div class="player shadow mt-3" style="height: 200px;">
+                  <h2 class="projectTitle">Segment 2</h2>
+                  <h5 class="projectOwnerUsername">[user]</h5><br>
+                  <!--HTML5 audio-->
+                  <audio id="music" preload="true">
+                    <source src="uploads/bryson1.mp3">
+                  </audio>
+
+                  <div id="wrapper">
+                    <!--Audio Player Interface-->
+                    <div id="audioplayer">
+                      <button id="pButton" class="play"></button>
+                      <div id="timeline">
+                        <div id="playhead"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div><br></div>
+              <!-- End Component -->
+              <!-- Component Section -->
+              <div class="col-md-12 mt-4">
+                <div class="song">
+                  <h6 class="mt-3">Initialized by [user]</h6>
+                  <div class="player shadow mt-3" style="height: 200px;">
+                    <h2 class="projectTitle">Segment 3</h2>
+                    <h5 class="projectOwnerUsername">[user]</h5><br>
+                    <!--HTML5 audio-->
+                    <audio id="music" preload="true">
+                      <source src="uploads/bryson1.mp3">
+                    </audio>
+
+                    <div id="wrapper">
+                      <!--Audio Player Interface-->
+                      <div id="audioplayer">
+                        <button id="pButton" class="play"></button>
+                        <div id="timeline">
+                          <div id="playhead"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div><br></div>
+                <!-- End Component -->
         </div>
+        <%- include components/footer.ejs %>
       </div>
-      <div class="col-md-1"></div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-  </body>
-</html>
+</div>
+<!

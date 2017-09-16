@@ -2,21 +2,18 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
 	  <!-- Navbar content -->
-		<a class="navbar-brand ml-5" href="#">ComposeHub</a>
+		<a class="navbar-brand ml-5" href="/">Coffee House</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Explore</a>
+					<a class="nav-link mr-4" href="#">Home <span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
 			<form class="form-inline my-4 my-lg-0">
-				<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
+				<input class="form-control mr-sm-2 search" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
 				<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
 			</form>
 			<ul class="navbar-nav mr-auto navbar-right">
@@ -24,7 +21,7 @@
 					<a class="nav-link" href="#">Activity <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link mr-5" href="#">Profile</a>
+					<a class="nav-link mr-5" href="/profile">Profile</a>
 				</li>
 			</ul>
 		</div>
@@ -42,11 +39,11 @@
 					    <div class="col-md-12">
 					      <div class="song">
 						      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-						      <div class="player shadow mt-2" style="height: 225px;">
+						      <div class="player shadow mt-2">
 						        <h2>Song Title</h2>
 						        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
 						      </div>
-						      <button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button>
+						      <a href="/project"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
 						    </div>
 						</div>
 					</div>
