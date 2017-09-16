@@ -1,0 +1,27 @@
+{
+  "name": "githubmusic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bupenieks/gitmusic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bupenieks/gitmusic/issues"
+  },
+  "homepage": "https://github.com/bupenieks/gitmusic#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "formidable": "^1.1.1",
+    "path": "^0.12.7",
+    "python-shell": "^0.4.0",
+    "socket.io": "^2.0.3",
+    "socketio-file-upload": "^0.6.0"
+  }
+}
