@@ -26,7 +26,7 @@ $('#upload-input').on('change', function(){
         console.log('-----formData: ', formData);
 
         $.ajax({
-            url: '/upload',
+            url: '/upload?uploadType=new&userId=user1&repoId=repoId',
             type: 'POST',
             data: formData,
             processData: false,

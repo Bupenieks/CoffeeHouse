@@ -3,6 +3,7 @@ var router = express.Router();
 var formidable = require('formidable');
 var fs = require('fs');
 var path = require('path');
+var vcs = require('../lib/version_control.js')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -23,6 +24,8 @@ router.post('/', function(req, res, next) {
    // rename it to it's orignal name
    form.on('file', function(field, file) {
      fs.rename(file.path, path.join(form.uploadDir, file.name));
+     console.log(path.join(form.uploadDir, file.name))
+     vcs.addToRepo(path.join(form.uploadDir, file.name), req.query.userId, req.query.repoId, file.name)
    });
 
    // log any errors that occur
