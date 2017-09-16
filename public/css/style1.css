@@ -97,11 +97,11 @@ body {
   min-width: 440px;
 }
 
-.buttonWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logoImg {
+  width: 60px;
+  height: 75px;
 }
+
 
 .features {
   background-color: #fff;
@@ -210,6 +210,16 @@ form  {
 
 .btn-outline-info:hover {
   background-color: #082129;
+}
+
+.btn-outline-secondary {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .createProject {
