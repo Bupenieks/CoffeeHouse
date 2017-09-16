@@ -1,5 +1,29 @@
-<% include components/header.ejs %>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link href="css/explore.css" rel="stylesheet">
+	<link href="css/style1.css" rel="stylesheet">
+	<script src="https://use.fontawesome.com/0e6a1b4153.js"></script>
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link href="https://fonts.googleapis.com/css?family=Cabin:500,400" rel="stylesheet">
+  <script src="https://use.fontawesome.com/0e6a1b4153.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="css/fileCreateStyles.css" rel="stylesheet">
+  <style>
+    #upload-input {
+      display: none;
+    }
+  </style>
+	<title>Explore Page</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
   <!-- Navbar content -->
   <a class="navbar-brand ml-5" href="#">ComposeHub</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,30 +52,37 @@
     </ul>
   </div>
 </nav>
-<div class="container signup">
-  <h1>Create a Project</h1>
-  <h4>Upload your base sound file and invite your friends to collaborate with you.</h4><br>
-  <hr class="trendingDivider">
-  <form class="mt-5">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Project Name:</label>
-    <input type="email" class="mainentry" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-    <small id="emailHelp" class="form-text text-muted mt-2">What would you like your project to be called?</small>
-  </div><br>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Decription:</label>
-    <input type="email" class="mainentry" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-    <small id="emailHelp" class="form-text text-muted mt-2">Tell us more.</small>
-  </div><br><br>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Sound File:</label><br>
-    <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
+  <div class="container signup">
+    <h1>Create a Project</h1>
+    <h4>Upload your base sound file and invite your friends to collaborate with you.</h4><br>
+    <hr class="trendingDivider">
+    <form class="mt-5">
+      <div class="form-group">
+        <label for="projectName">Project Name:</label>
+        <input type="email" class="mainentry" id="projectName" aria-describedby="emailHelp" placeholder="">
+        <small id="emailHelp" class="form-text text-muted mt-2">What would you like your project to be called?</small>
+      </div><br>
+      <div class="form-group">
+        <label for="projectDescription">Decription:</label>
+        <input type="email" class="mainentry" id="projectDescription" aria-describedby="emailHelp" placeholder="">
+        <small id="emailHelp" class="form-text text-muted mt-2">Tell us more.</small>
+      </div><br><br>
+      <div class="form-group">
+        <label for="soundFile">Sound File:</label>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar"></div>
+            </div>
+            <button class="btn btn-lg upload-btn" type="button">Upload File</button>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="mt-5">
-    <button class="btn btn-lg upload-btn" type="button">Upload File</button>
-  </div>
-  </div>
-
-</form>
-<script src="javascripts/upload.js"></script>
-<% include components/footer.ejs %>
+  <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="javascripts/upload.js"></script>
+  </body>
+</html>

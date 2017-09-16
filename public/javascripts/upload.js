@@ -7,8 +7,13 @@ $('.upload-btn').on('click', function (){
 $('#upload-input').on('change', function(){
 
     var files = $(this).get(0).files;
-    console.log('on upload input change files:', files);
-    console.log('files.length: ', files.length);
+    console.log('$(this).get: ', $(this).get(0));
+    const projectName = document.getElementById('projectName').value;
+    console.log('email input loading: ', projectName);
+    const projectDescription = document.getElementById('projectDescription').value;
+    console.log('description input loading: ', projectDescription);
+    // console.log('on upload input change files:', files);
+    // console.log('files.length: ', files.length);
     if (files.length > 0){
         // create a FormData object which will be sent as the data payload in the
         // AJAX request
@@ -24,11 +29,12 @@ $('#upload-input').on('change', function(){
         }
 
         console.log('-----formData: ', formData);
+        // url: '/upload?uploadType=new&userId=user1&repoId=repoId',
 
         $.ajax({
-            url: '/upload?uploadType=new&userId=user1&repoId=repoId',
+            url: '/upload',
             type: 'POST',
-            data: formData,z
+            data: formData,
             processData: false,
             contentType: false,
             success: function(data){
