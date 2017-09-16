@@ -24,7 +24,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');
 
 app.use('/', index);
-app.use('/fileUpload', fileUpload);
+app.use('/upload', fileUpload);
 app.use('/home', home);
 
 /*

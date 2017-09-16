@@ -7,7 +7,8 @@ $('.upload-btn').on('click', function (){
 $('#upload-input').on('change', function(){
 
     var files = $(this).get(0).files;
-    console.log('on upload input change');
+    console.log('on upload input change files:', files);
+    console.log('files.length: ', files.length);
     if (files.length > 0){
         // create a FormData object which will be sent as the data payload in the
         // AJAX request
@@ -16,6 +17,7 @@ $('#upload-input').on('change', function(){
         // loop through all the selected files and add them to the formData object
         for (var i = 0; i < files.length; i++) {
             var file = files[i];
+            console.log('file in looping through files: ', file);
 
             // add the files to formData object for the data payload
             formData.append('uploads[]', file, file.name);
@@ -56,6 +58,8 @@ $('#upload-input').on('change', function(){
                     }
 
                 }, false);
+
+                console.log('formData: ', formData);
 
                 return xhr;
             }
