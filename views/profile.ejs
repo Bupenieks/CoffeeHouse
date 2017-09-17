@@ -30,15 +30,15 @@
       <div class="col-md-12">
         <div class="song">
           <div class="player shadow mt-2">
-            <h2><%= profile.repositories[song].title %></h2>
-            <audio class="audioPlayer" src="<%= profile.repositories[song].path %>" controls="controls"></audio>
+            <h2><%= song %></h2>
+            <audio class="audioPlayer" src="<%= song %>" controls="controls"></audio>
           </div>
-          <a href="/project/<%= profile.repositories[song].title %>"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
+          <a href="/project/<%= song %>"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
         </div>
       </div>
     </div>
     <% } %>
-    <br><hr> <!-- Projects Contributed To
+    <br><!-- Projects Contributed To
     <h2 class="pCreated mt-5">Projects Contributed To:</h2><br>
 
       <div class="row">

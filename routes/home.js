@@ -6,10 +6,11 @@ var vcs = require('../lib/version_control')
 router.get('/', function(req, res, next) {
    if (res.locals.user) {
   var theUser = vcs.getJSON(res.locals.user.username);
-  theUser.repositories = [{"title":"TheTitle","path":"/uploads/bryson1.mp3"}]
+
 } else {
   theUser = {}
 }
+  console.log("THE JSON: "+theUser);
   res.render('index', {
     title: 'Express',
     user: res.locals.user || "",

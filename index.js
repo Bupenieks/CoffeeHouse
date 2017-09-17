@@ -87,6 +87,14 @@ app.all('*', (req, res, next) => {
     next();
 })
 
+function loggedIn(req, res, next) {
+    if (req.user) {
+        next();
+    } else {
+        res.redirect('/login');
+    }
+}
+
 app.use(logger('dev'));
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -153,4 +161,7 @@ app.use((req, res) => {
     res.status(404).send({ url: req.url });
 });
 
-module.exports = app;
+module.exports = {
+  app,
+  loggedIn
+}
