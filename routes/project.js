@@ -9,13 +9,13 @@ router.get('/', function(req, res, next) {
 
 router.get("/:repo", function(req, res, next) {
     var theRepo = vcs.getUserRepo(req.user.uniqId, req.params.repo).toJSON()
-    console.log(theRepo.tracks)
+    console.log(theRepo.mainFileLoc.loc)
     res.render('project', {
       profile: theRepo,
       title: req.params.repo,
       owner: vcs.ownerToUser(theRepo.owner),
       contributors: theRepo.tracks,
-      src: theRepo.mainFileLoc,
+      src: theRepo.mainFileLoc.loc,
     });
 
 });
