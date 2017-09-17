@@ -156,7 +156,6 @@ server.listen(app.get('port'), () => {
 });
 
 let user = require('./routes/signup.js');
-app.use('/users', user);
 
 app.use((req, res) => {
     res.status(404).send({ url: req.url });

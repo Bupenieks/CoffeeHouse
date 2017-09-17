@@ -2,7 +2,7 @@ from pydub import AudioSegment
 import os, sys
 
 path = os.getcwd()+ "\\"
-export_path = path + sys.argv[1]
+export_path = sys.argv[1]
 if (sys.argv[1][-1:] != '\\' and sys.argv[1][-1:] != '//'):
     export_path += "\\"
 base_track_file = sys.argv[2]

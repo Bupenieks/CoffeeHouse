@@ -40,7 +40,7 @@
 								<h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
 								<div class="player shadow mt-2">
 									<h2><%= track %></h2> <% console.log(tracks[author][track].mainFileLoc) %>
-									<audio class="audioPlayer" src="<%= tracks[author][track].mainFileLoc %>" controls="controls"></audio>
+									<audio class="audioPlayer" src="<%= (tracks[author][track].mainFileLoc).replace('./public/', './') %>" controls="controls"></audio>
 								</div>
 								<a href="/project/<%= track %>"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
 							</div>
