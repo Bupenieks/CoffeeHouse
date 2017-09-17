@@ -16,7 +16,6 @@ const http = require('http'),
     profile = require('./routes/profile'),
     signup = require('./routes/signup'),
     login = require('./routes/login'),
-    users = require('./users'),
     favicon = require('serve-favicon');
 
 const expressValidator = require('express-validator');
@@ -99,7 +98,7 @@ function loggedIn(req, res, next) {
 app.use(logger('dev'));
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'usersData')));
+app.use(express.static(path.join(__dirname, 'users')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
