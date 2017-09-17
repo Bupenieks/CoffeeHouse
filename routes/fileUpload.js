@@ -23,9 +23,12 @@ router.post('/', function(req, res, next) {
    // every time a file has been uploaded successfully,
    // rename it to it's orignal name
    form.on('file', function(field, file) {
+     console.log('field in form.on file: ', field);
+     console.log('file in form.on file: ', file);
      fs.rename(file.path, path.join(form.uploadDir, file.name));
-    vcs.createNewRepo(req.user.uniqId, req.query.reponame);
-       vcs.addToRepo(path.join(form.uploadDir, file.name), req.user.uniqId, req.query.reponame, file.name)
+    //  vcs.addToRepo(path.join(form.uploadDir, file.name), req.query.userId, req.query.repoId, file.name)
+		 //vcs.createNewRepo(req.user.uniqId, req.query.reponame);
+		 // vcs.addToRepo(path.join(form.uploadDir, file.name), req.user.uniqId, req.query.reponame, file.name)
    });
 
    // log any errors that occur
@@ -39,7 +42,13 @@ router.post('/', function(req, res, next) {
   });
 
   // parse the incoming request containing the form data
-  form.parse(req);
+  form.parse(req, (err, fields, files) => {
+    console.log('fields.projectName: ', fields.projectName);
+    console.log('fields.projectDescription: ', fields.projectDescription);
+    // console.log('fields.initialtime: ', fields.initialupload);
+    const file = files['uploads[]'];
+    console.log('files.uploads[]: ', files['uploads[]']);
+  });
 
 })
 
