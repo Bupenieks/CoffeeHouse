@@ -16,6 +16,7 @@ const http = require('http'),
     profile = require('./routes/profile'),
     signup = require('./routes/signup'),
     login = require('./routes/login'),
+    users = require('./users'),
     favicon = require('serve-favicon');
 
 const expressValidator = require('express-validator');
@@ -98,6 +99,7 @@ function loggedIn(req, res, next) {
 app.use(logger('dev'));
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'usersData')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -154,8 +156,8 @@ server.listen(app.get('port'), () => {
     console.log('Express server listening on port ' + app.get('port'));
 });
 
-let users = require('./routes/signup.js');
-app.use('/users', users);
+let user = require('./routes/signup.js');
+app.use('/users', user);
 
 app.use((req, res) => {
     res.status(404).send({ url: req.url });
