@@ -1,0 +1,123 @@
+.pTitle {
+  font-size: 35px;
+  margin-top: 50px;
+}
+
+.pComposed {
+  font-size: 25px;
+  margin-top: 50px;
+  display: inline;
+}
+
+.pTitleBlock{
+  height:50px;
+}
+
+.cloneButton{
+
+}
+
+#nav-tabs {
+  margin-top: 25px;
+}
+
+a:hover, a:visited, a:link, a:active, a:visited:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#slidecontainer {
+    width: 100%; /* Width of the outside container */
+    display: flex;
+    justify-content: center;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use webkit (Chrome, Opera, Safari, Edge) and moz (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+#initial-time {
+  height: 50px;
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+.contribution-title {
+  text-align: center;
+  font-size: 32px;
+  margin: 15px;
+}
+
+.btn:focus, .upload-btn:focus{
+    outline: 0 !important;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn:active,
+.upload-btn.active {
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+}
+
+.upload-button {
+  display: flex;
+  justify-content: left;
+  margin: 25px;
+  margin-left: 0px;
+
+}
+
+.upload-btn {
+width: 100%;
+}
+
+.progress {
+  height: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+}
+
+#initial-time-container {
+  width: 25%;
+  display: flex;
+  justify-content: right;
+}
+
+.slideTime {
+  margin-top: -40px;
+}
