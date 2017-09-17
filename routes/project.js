@@ -9,7 +9,14 @@ router.get('/', function(req, res, next) {
 
 router.get("/:repo", function(req, res, next) {
     var theRepo = vcs.getUserRepo(req.user.uniqId, req.params.repo).toJSON()
-    res.render('project', { profile: theRepo });
+    console.log(theRepo.tracks)
+    res.render('project', {
+      profile: theRepo,
+      title: req.params.repo,
+      owner: vcs.ownerToUser(theRepo.owner),
+      contributors: theRepo.tracks,
+    });
+
 });
 
 module.exports = router;
