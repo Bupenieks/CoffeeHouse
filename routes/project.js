@@ -7,9 +7,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get("/:username", function(req, res, next) {
-  var theUser = vcs.getJSON(req.params.username);
-  res.render('project', { profile: theUser });
+router.get("/:repo", function(req, res, next) {
+    var theRepo = vcs.getUserRepo(req.user.uniqId, req.params.repo).toJSON()
+    res.render('project', { profile: theRepo });
 });
 
 module.exports = router;

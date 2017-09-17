@@ -6,6 +6,10 @@ var vcs = require('../lib/version_control')
 router.get('/', function(req, res, next) {
    if (res.locals.user) {
   var theUser = vcs.getJSON(res.locals.user.username);
+<<<<<<< Updated upstream
+
+=======
+>>>>>>> Stashed changes
 } else {
   theUser = {}
 }
