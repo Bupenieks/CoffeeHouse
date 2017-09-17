@@ -16,7 +16,7 @@
 				<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
 			</form>
 			<ul class="navbar-nav mr-auto navbar-right">
-				<!-- <%if (profile.username) { %> -->
+				<%if (profile.username) { %>
 					<li class="nav-item">
 						<a class="nav-link mr-5" href="/profile/<%= user.username %>">Profile</a>
 					</li>
@@ -32,93 +32,22 @@
 				<h3 id="explore-header"><i class="fa fa-fire mr-3" aria-hidden="true"></i>Trending Songs</h3>
 				<hr class="trendingDivider"><br>
 
-					<!-- Song Card -->
-					  <div class="row">
-					    <div class="col-md-12">
-					      <div class="song">
-						      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-						      <div class="player shadow mt-2">
-						        <h2>Song Title</h2>
-						        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
-						      </div>
-						      <a href="/project"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
-						    </div>
+					<% for (var author in tracks) { %>
+						<% for (var track in tracks[author]) { %>
+					<div class="row mt-5">
+						<div class="col-md-12">
+							<div class="song">
+								<h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
+								<div class="player shadow mt-2">
+									<h2><%= track %></h2> <% console.log(tracks[author][track].mainFileLoc) %>
+									<audio class="audioPlayer" src="<%= tracks[author][track].mainFileLoc %>" controls="controls"></audio>
+								</div>
+								<a href="/project/<%= track %>"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
 							</div>
 						</div>
-					<!-- End Song Card -->
-
-					<!-- Song Card -->
-						<div class="row mt-4">
-							<div class="col-md-12">
-								<div class="song">
-								<h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-								<div class="player shadow mt-2">
-									<h2>Another Song</h2>
-									<audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
-								</div>
-								<button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button>
-							</song>
-							</div>
 					</div>
-					</div>
-					<!-- End Song Card -->
-					<!-- Song Card -->
-						<div class="row mt-4">
-							<div class="col-md-12">
-								<div class="song">
-								<h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-								<div class="player shadow mt-2">
-									<h2>Next Song</h2>
-									<audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
-								</div>
-								<button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button> <!-- Link using data-id:song.id -->
-							</song>
-							</div>
-					</div>
-					</div>
-					<!-- End Song Card --><!-- Song Card -->
-					  <div class="row mt-4">
-					    <div class="col-md-12">
-					      <div class="song">
-					      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-					      <div class="player shadow mt-2">
-					        <h2>A Third Song</h2>
-					        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
-					      </div>
-					      <button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button>
-					    </song>
-					    </div>
-					</div>
-					</div>
-					<!-- End Song Card --><!-- Song Card -->
-					  <div class="row mt-4">
-					    <div class="col-md-12">
-					      <div class="song">
-					      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-					      <div class="player shadow mt-2">
-					        <h2>A Third Song</h2>
-					        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
-					      </div>
-					      <button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button>
-					    </song>
-					    </div>
-					</div>
-					</div>
-					<!-- End Song Card --><!-- Song Card -->
-					  <div class="row mt-4">
-					    <div class="col-md-12">
-					      <div class="song">
-					      <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
-					      <div class="player shadow mt-2">
-					        <h2>A Third Song</h2>
-					        <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
-					      </div>
-					      <button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button>
-					    </song>
-					    </div>
-					</div>
-					</div>
-					<!-- End Song Card -->
+<% } %>
+<% } %>
 			</div>
 			<div class="col-1">
 			</div>
@@ -130,7 +59,7 @@
 					</div>
 					<% for (var song in profile.repositories) { %>
 						<div class="card">
-							<a href="/project/<%= profile.repositories[song].title %>">
+							<a href="/project/<%= song %>">
 								<div class="card-body">
 								<span><%= song %></span>
 							</div>
