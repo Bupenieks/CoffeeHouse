@@ -41,10 +41,7 @@ db.once('open', () => {
     console.log('Connected to mongodb');
 })
 
-app.all('*', (req, res, next) => {
-    res.locals.user = req.user || null;
-    next();
-})
+
 
 // Express Messages Middleware
 app.use(require('connect-flash')());
@@ -84,6 +81,11 @@ require('./lib/passport')(passport);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+
+app.all('*', (req, res, next) => {
+    res.locals.user = req.user || null;
+    next();
+})
 
 app.use(logger('dev'));
 
