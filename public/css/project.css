@@ -94,8 +94,9 @@ a:hover, a:visited, a:link, a:active, a:visited:hover {
 
 .upload-button {
   display: flex;
-  justify-content: center;
-  margin: 15px;
+  justify-content: left;
+  margin: 25px;
+  margin-left: 0px;
 }
 
 .upload-btn {
@@ -104,15 +105,18 @@ a:hover, a:visited, a:link, a:active, a:visited:hover {
 
 .progress {
   height: 25px;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin-left: 10vw;
+  margin-left: 0;
 }
 
 #initial-time-container {
   width: 25%;
   display: flex;
-  justify-content: space-around;
-  margin-left: 33vw;
+  justify-content: right;
+}
+
+.slideTime {
+  margin-top: -40px;
 }
