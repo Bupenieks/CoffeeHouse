@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
                     } else {
                         console.log("registered!")
                         console.log(newUser)
-                        vcs.createNewProfile(newUser.uniqId, newUser.username)
+                        vcs.createNewProfile(newUser.uniqId, newUser.username, newUser.name, newUser.email)
                         req.flash('success', 'You are now registered!');
                         res.redirect('/login');
                     }
