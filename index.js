@@ -15,10 +15,13 @@ const http = require('http'),
     create = require('./routes/create'),
     profile = require('./routes/profile'),
     signup = require('./routes/signup'),
-    login = require('./routes/login');
+    login = require('./routes/login'),
+    favicon = require('serve-favicon');
 
 const app = express().use(siofu.router),
 			server = http.Server(app);
+
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.use(logger('dev'));
 
