@@ -16,9 +16,11 @@
 				<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
 			</form>
 			<ul class="navbar-nav mr-auto navbar-right">
-				<li class="nav-item">
-					<a class="nav-link mr-5" href="/profile/<%= user._id %>">Profile</a>
-				</li>
+				<%if (profile.username) { %>
+					<li class="nav-item">
+						<a class="nav-link mr-5" href="/profile/<%= user.username %>">Profile</a>
+					</li>
+				<% } %>
 			</ul>
 		</div>
 	</nav>
@@ -120,43 +122,24 @@
 			</div>
 			<div class="col-1">
 			</div>
-			<div class="col-3" id="project-sidebar">
-				<div style="flex-direction: row; justify-content: end;">
-					<a href="/create"><button type="button" class="btn btn-outline-primary mt-4 createProject">Create a Project</button></a>
-					<h4 class="card-title yourProjects mt-5" style="padding:5px;">Your Projects</h4>
-				</div>
-				<div class="card">
-					<a href="#">
-						<div class="card-body">
-						<span>Song 2</span>
-						<span class="sidebarTime">5:01</span>
+			<%if (profile.username) { %>
+				<div class="col-3" id="project-sidebar">
+					<div style="flex-direction: row; justify-content: end;">
+						<a href="/create"><button type="button" class="btn btn-outline-primary mt-4 createProject">Create a Project</button></a>
+						<h4 class="card-title yourProjects mt-5" style="padding:5px;">Your Projects</h4>
 					</div>
-				</a>
+					<% for (var song in profile.repositories) { %>
+						<div class="card">
+							<a href="/project/<%= profile.repositories[song].title %>">
+								<div class="card-body">
+								<span><%= profile.repositories[song].title %></span>
+							</div>
+						</a>
+						</div>
+					<% } %>
+
 				</div>
-				<div class="card">
-					<a href="#">
-						<div class="card-body">
-						<span>Song 2</span>
-						<span class="sidebarTime">5:01</span>
-					</div>
-				</a>
-				</div>
-				<div class="card">
-					<a href="#">
-						<div class="card-body">
-						<span>Song 3</span>
-						<span class="sidebarTime">5:01</span>
-					</div>
-				</a>
-				</div>
-				<div class="card">
-					<a href="#">
-						<div class="card-body">
-						<span>Song 4</span>
-						<span class="sidebarTime">5:01</span>
-					</div>
-				</a>
-				</div>
-			</div>
+			<% } %>
+
 		</div>
 		<%- include components/footer.ejs %>

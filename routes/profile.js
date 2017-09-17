@@ -7,9 +7,11 @@ router.get('/', function(req, res, next) {
   res.render('profile', { title: 'xd' });
 });
 
-router.get("/:id", function(req, res, next) {
-  console.log(vcs.getJSON(req.params.id))
-  res.render('profile', { title: 'xd' });
+router.get("/:username", function(req, res, next) {
+  if (res.locals.user) 
+  var theUser = vcs.getJSON(req.params.username);
+  theUser.repositories = [{"title":"TheTitle","path":"/uploads/bryson1.mp3"}]
+  res.render('profile', { profile: theUser });
 });
 
 
