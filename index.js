@@ -98,7 +98,7 @@ function loggedIn(req, res, next) {
 app.use(logger('dev'));
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'usersData')));
+app.use(express.static(path.join(__dirname, 'users')));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
