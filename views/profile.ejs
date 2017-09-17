@@ -1,3 +1,90 @@
-<%- include components/header.ejs %>
-  
-<%- include components/footer.ejs %>
+<% include components/header.ejs %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+  <!-- Navbar content -->
+  <a class="navbar-brand ml-5" href="/">Coffee House</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link mr-4" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-4 my-lg-0">
+      <input class="form-control mr-sm-2 search" type="text" placeholder="Search" aria-label="Search" style="width: 300px;">
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+    </form>
+    <ul class="navbar-nav mr-auto navbar-right">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Activity <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mr-5" href="#">Profile</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+  <div class="container signup">
+    <h1><%= title %></h1><hr class="trendingDivider">
+    <h2 class="pCreated mt-4">Projects Created:</h2><br>
+    <!-- Song Card -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="song">
+            <div class="player shadow mt-2">
+              <h2>Song Title</h2>
+              <audio class="audioPlayer" src="/uploads/bryson1.mp3" controls="controls"></audio>
+            </div>
+            <a href="/project"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
+          </div>
+      </div>
+    </div>
+    <!-- End Song Card -->
+
+    <!-- Song Card -->
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <div class="song">
+          <div class="player shadow mt-2">
+            <h2>Another Song</h2>
+            <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
+          </div>
+          <button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button>
+        </song>
+        </div>
+    </div>
+    </div>
+    <!-- End Song Card -->
+    <br><hr>
+    <h2 class="pCreated mt-5">Projects Contributed To:</h2><br>
+    <!-- Song Card -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="song">
+            <div class="player shadow mt-2">
+              <h2>Song Title</h2>
+              <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
+            </div>
+            <a href="/project"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
+          </div>
+      </div>
+    </div>
+    <!-- End Song Card -->
+
+    <!-- Song Card -->
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <div class="song">
+          <div class="player shadow mt-2">
+            <h2>Another Song</h2>
+            <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
+          </div>
+          <button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button>
+        </song>
+        </div>
+    </div>
+    </div>
+    <!-- End Song Card -->
+
+    <% include components/footer.ejs %>
