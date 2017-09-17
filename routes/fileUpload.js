@@ -45,7 +45,7 @@ router.post('/', function(req, res, next) {
   form.parse(req, (err, fields, files) => {
     console.log('fields.projectName: ', fields.projectName);
     console.log('fields.projectDescription: ', fields.projectDescription);
-    // console.log('fields.initialtime: ', fields.initialupload);
+    // console.log('fields.initialtime: ', fields.initialTime);
     const file = files['uploads[]'];
     console.log('files.uploads[]: ', files['uploads[]']);
   });
