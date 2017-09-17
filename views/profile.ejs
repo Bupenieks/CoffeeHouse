@@ -23,39 +23,24 @@
   </div>
   </nav>
   <div class="container signup">
-    <h1><%= title %></h1><hr class="trendingDivider">
+    <h1><%= profile.fullname %></h1><hr class="trendingDivider">
     <h2 class="pCreated mt-4">Projects Created:</h2><br>
-    <!-- Song Card -->
-      <div class="row">
-        <div class="col-md-12">
-          <div class="song">
-            <div class="player shadow mt-2">
-              <h2>Song Title</h2>
-              <audio class="audioPlayer" src="/uploads/bryson1.mp3" controls="controls"></audio>
-            </div>
-            <a href="/project"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
+    <% for (var song in profile.repositories) { %>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <div class="song">
+          <div class="player shadow mt-2">
+            <h2><%= profile.repositories[song].title %></h2>
+            <audio class="audioPlayer" src="<%= profile.repositories[song].path %>" controls="controls"></audio>
           </div>
+          <a href="/project/<%= profile.repositories[song].title %>"><button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button></a>
+        </div>
       </div>
     </div>
-    <!-- End Song Card -->
-
-    <!-- Song Card -->
-      <div class="row mt-4">
-        <div class="col-md-12">
-          <div class="song">
-          <div class="player shadow mt-2">
-            <h2>Another Song</h2>
-            <audio class="audioPlayer" src="http://radio.hackthenorth.com/listen" controls="controls"></audio>
-          </div>
-          <button type="button" class="btn btn-outline-info btn-sm mt-4">View History</button>
-        </song>
-        </div>
-    </div>
-    </div>
-    <!-- End Song Card -->
-    <br><hr>
+    <% } %>
+    <br><hr> <!-- Projects Contributed To
     <h2 class="pCreated mt-5">Projects Contributed To:</h2><br>
-    <!-- Song Card -->
+
       <div class="row">
         <div class="col-md-12">
           <div class="song">
@@ -67,9 +52,9 @@
           </div>
       </div>
     </div>
-    <!-- End Song Card -->
 
-    <!-- Song Card -->
+
+
       <div class="row mt-4">
         <div class="col-md-12">
           <div class="song">
