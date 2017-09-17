@@ -17,8 +17,71 @@ const http = require('http'),
     signup = require('./routes/signup'),
     login = require('./routes/login');
 
+const expressValidator = require('express-validator');
+const flash = require('connect-flash');
+const session = require('express-session');
+const passport = require('passport');
+const config = require('./lib/database')
+const mongoose = require('mongoose');
+
+
+mongoose.connect(config.database);
+let db = mongoose.connection;
+
 const app = express().use(siofu.router),
 			server = http.Server(app);
+
+// Check for db errors
+db.on('error', (err) => {
+    console.log(err);
+})
+
+db.once('open', () => {
+    console.log('Connected to mongodb');
+})
+
+app.all('*', (req, res, next) => {
+    res.locals.user = req.user || null;
+    next();
+})
+
+// Express Messages Middleware
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+    res.locals.messages = require('express-messages')(req, res);
+    next();
+});
+
+// Express Session Middleware
+app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true,
+}));
+
+
+app.use(expressValidator({
+    errorFormatter: function(param, msg, value) {
+        var namespace = param.split('.')
+            , root    = namespace.shift()
+            , formParam = root;
+
+        while(namespace.length) {
+            formParam += '[' + namespace.shift() + ']';
+        }
+        return {
+            param : formParam,
+            msg   : msg,
+            value : value
+        };
+    }
+}));
+
+// Passport config
+require('./lib/passport')(passport);
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(logger('dev'));
 
@@ -36,6 +99,7 @@ app.use('/create', create);
 app.use('/profile', profile);
 app.use('/signup', signup);
 app.use('/login', login);
+
 
 /*
 io.on("connection", function(socket){
@@ -74,6 +138,9 @@ app.get('/test/', (req, res) => {
 server.listen(app.get('port'), () => {
     console.log('Express server listening on port ' + app.get('port'));
 });
+
+let users = require('./routes/signup.js');
+app.use('/users', users);
 
 app.use((req, res) => {
     res.status(404).send({ url: req.url });

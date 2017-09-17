@@ -24,8 +24,15 @@ router.post('/', function(req, res, next) {
    // rename it to it's orignal name
    form.on('file', function(field, file) {
      fs.rename(file.path, path.join(form.uploadDir, file.name));
+<<<<<<< Updated upstream
+     console.log(path.join(form.uploadDir, file.name))
+    //  vcs.addToRepo(path.join(form.uploadDir, file.name), req.query.userId, req.query.repoId, file.name)
+=======
+     console.log("123")
+     console.log(req.user)
      vcs.createNewRepo(req.user.uniqId, req.query.reponame);
-       vcs.addToRepo(path.join(form.uploadDir, file.name), req.user.uniqId, req.query.reponame, file.name)
+       vcs.addToRepo(path.join(form.uploadDir, file.name), req.user.uniqId, res.query.reponame, file.name)
+>>>>>>> Stashed changes
    });
 
    // log any errors that occur
