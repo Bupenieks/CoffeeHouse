@@ -53,7 +53,7 @@
     </nav>
     <div class="container">
       <div class="row">
-      <h1 class="pTitle">Project Title</h1><a href="/create">
+      <h1 class="pTitle"><% console.log('the repo: ', profile) %></h1><a href="/create">
       <a href="/create?"><button type="button" id="<%=  %>" class="btn btn-outline-primary mt-5 ml-3 cloneButton">Clone this Project</button></a><br>
       <a href="/create?id:"><button type="button" class="btn btn-outline-primary mt-5 ml-3 cloneButton">Contribute to this Project</button></a><br>
     </div>
@@ -64,7 +64,7 @@
           <div class="song">
             <h6 class="mt-3" style="margin-top: 0px !important;">Created by Sam Jones and 2 others.</h6>
             <div class="player gshadow mt-3" style="height: 200px;">
-              <h2 class="projectTitle" id="projectName">Song Title</h2>
+              <h2 class="projectTitle" id="projectName"><%= profile %></h2>
               <div class="projectDescription" id="projectDescription"> </div>
               <h5 class="projectOwnerUsername">Username</h5><br>
               <!--HTML5 audio-->
@@ -164,7 +164,7 @@
                         </div>
                         <div class="col-8 slideTime" style="float:right">
                           <div class="form-group" id="slidecontainer">
-                            <input type="range" min="0" step="0.01" max="240" value="50" class="slider" id="myRange" style="width: 250vh;">
+                            <input type="range" min="0" step="0.01" max="240" value="50" class="slider" id="myRange" style="width: 250vh; margin-top: 110px;">
                           </div>
                         </div>
                       </div>
@@ -191,8 +191,10 @@
       <br><br><br>
       <hr>
       <br>
-      <p style="float:left; margin-bottom: 25px">Hack The North 2017</p>
-      <p style="float:right; margin-bottom: 25px">Coffee House &nbsp;<i class="fa fa-coffee" aria-hidden="true"></i></p><br>
+      <div class="">
+        <p style="float:left; margin-bottom: 25px">Hack The North 2017</p>
+        <p style="float:right; margin-bottom: 25px">Coffee House &nbsp;<i class="fa fa-coffee" aria-hidden="true"></i></p><br>    
+      </div>
     </div>
 
     <!-- <script type="text/javascript" src='javascripts/profileNav.js'></script> -->
