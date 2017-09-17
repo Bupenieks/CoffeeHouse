@@ -15,6 +15,7 @@ router.get("/:repo", function(req, res, next) {
       title: req.params.repo,
       owner: vcs.ownerToUser(theRepo.owner),
       contributors: theRepo.tracks,
+      src: theRepo.mainFileLoc,
     });
 
 });
