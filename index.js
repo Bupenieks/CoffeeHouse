@@ -15,7 +15,8 @@ const http = require('http'),
     create = require('./routes/create'),
     profile = require('./routes/profile'),
     signup = require('./routes/signup'),
-    login = require('./routes/login');
+    login = require('./routes/login'),
+    favicon = require('serve-favicon');
 
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
@@ -82,6 +83,7 @@ require('./lib/passport')(passport);
 // Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 app.use(logger('dev'));
 
