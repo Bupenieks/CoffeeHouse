@@ -8,13 +8,13 @@ $('#upload-input').on('change', function(){
 
     var files = $(this).get(0).files;
     console.log('$(this).get: ', $(this).get(0));
-    const projectName = document.getElementById('projectName').value;
-    console.log('email input loading: ', projectName);
-    const projectDescription = document.getElementById('projectDescription').value;
-    console.log('description input loading: ', projectDescription);
+    // const projectName = document.getElementById('projectName').value;
+    // console.log('email input loading: ', projectName);
+    // const projectDescription = document.getElementById('projectDescription').value;
+    // console.log('description input loading: ', projectDescription);
     // console.log('on upload input change files:', files);
     // console.log('files.length: ', files.length);
-    if (files.length > 0){
+    if (files.length > 0){ // ??? may need to just change to one
         // create a FormData object which will be sent as the data payload in the
         // AJAX request
         var formData = new FormData();

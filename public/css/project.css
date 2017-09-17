@@ -6,6 +6,7 @@
 .pComposed {
   font-size: 25px;
   margin-top: 50px;
+  display: inline;
 }
 
 .pTitleBlock{
@@ -14,4 +15,13 @@
 
 .cloneButton{
 
+}
+
+#nav-tabs {
+  margin-top: 25px;
+}
+
+a:hover, a:visited, a:link, a:active, a:visited:hover {
+    text-decoration: none;
+    color: black;
 }
