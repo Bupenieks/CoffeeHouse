@@ -53,7 +53,7 @@ router.post('/', function(req, res, next) {
         console.log("HERE")
         vcs.createNewRepo(req.user.uniqId, fields.projectName);
     }
-    vcs.addToRepo(path.join(form.uploadDir, file.name), req.user.uniqId, fields.projectName, file.name)
+    vcs.addToRepo(path.join(form.uploadDir, file.name), req.user.uniqId, fields.projectName, file.name, fields.timing)
   });
 
 })
