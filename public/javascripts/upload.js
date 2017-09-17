@@ -28,7 +28,7 @@ $('#upload-input').on('change', function(){
         // AJAX request
         var formData = new FormData();
 
-        console.log('uploadMode: ', uploadMode);
+        formData.append('uploadMode', uploadMode);
         formData.append('projectName', projectName);
         formData.append('projectDescription', projectDescription);
         formData.append('initialTime', initialTime);

@@ -31,12 +31,12 @@ router.post('/', (req, res) => {
         });
     } else {
         let newUser = new User({
-            uniqId,
-            name,
-            email,
-            username,
-            password,
-            repositories
+                uniqId,
+                name,
+                email,
+                username,
+                password,
+                repositories
         });
         bcrypt.genSalt(10, (err, salt) => {
             bcrypt.hash(newUser.password, salt, (err, hash) => {
