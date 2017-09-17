@@ -28,7 +28,7 @@ body {
 .upload-btn:active,
 .upload-btn.active {
     color: #ffffff;
-    background-color: #FA8900;
+    background-color: #007BFF;
     border: none;
 }
 

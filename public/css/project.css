@@ -28,6 +28,8 @@ a:hover, a:visited, a:link, a:active, a:visited:hover {
 
 #slidecontainer {
     width: 100%; /* Width of the outside container */
+    display: flex;
+    justify-content: center;
 }
 
 /* The slider itself */
@@ -66,6 +68,51 @@ a:hover, a:visited, a:link, a:active, a:visited:hover {
 }
 
 #initial-time {
-  width: 200px;
-  height: 100px;
+  height: 50px;
+  width: 150px;
+  margin-bottom: 50px;
+}
+
+.contribution-title {
+  text-align: center;
+  font-size: 32px;
+  margin: 15px;
+}
+
+.btn:focus, .upload-btn:focus{
+    outline: 0 !important;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn:active,
+.upload-btn.active {
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+}
+
+.upload-button {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.upload-btn {
+
+}
+
+.progress {
+  height: 25px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-left: 10vw;
+}
+
+#initial-time-container {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 33vw;
 }

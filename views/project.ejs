@@ -23,12 +23,12 @@
         display: none;
       }
     </style>
-  	<title>Project Page</title>
+  	<title>Coffee House</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
       <!-- Navbar content -->
-      <a class="navbar-brand ml-5" href="#">ComposeHub</a>
+      <a class="navbar-brand ml-5" href="#">CoffeeHouse</a>
       <a href="/clone"<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -62,7 +62,7 @@
       <div class="row mt-4">
         <div class="col-md-12">
           <div class="song">
-            <h6 class="mt-3">Created by Sam Jones and 2 others.</h6>
+            <h6 class="mt-3" style="margin-top: 0px !important;">Created by Sam Jones and 2 others.</h6>
             <div class="player gshadow mt-3" style="height: 200px;">
               <h2 class="projectTitle" id="projectName">Song Title</h2>
               <div class="projectDescription" id="projectDescription"> </div>
@@ -145,38 +145,48 @@
                   </div>
                 </div>
               </div>
-              </div>
+            </div>
             <div class="tab-pane" id="contribute" role="tabpanel">
               <div class="contribution-container">
-                <form class="mt-5">
-                  <div class="form-group" id="slidecontainer">
-                    <input type="range" min="0" step="0.01" max="240" value="50" class="slider" id="myRange">
-                  </div>
-                  <input type="number" id="initial-time" placeholder="1.0" step="0.01" min="0" max="240">
-                  <div class="form-group">
-                    <label for="soundFile">Sound File:</label>
-                    <div class="panel panel-default">
-                      <div class="panel-body">
-                        <div class="progress">
-                          <div class="progress-bar" role="progressbar"></div>
-                        </div>
+                <h3 class="contribution-title">Make A Contribution!</h3>
+                <div class="form-group">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar"></div>
+                      </div>
+                      <div class="upload-button">
                         <button class="btn btn-lg upload-btn" type="button">Upload File</button>
                       </div>
                     </div>
                   </div>
-                  <div id="uploadMode" style="display: none;">contribute</div>
-                </form>
+                </div>
+
+                <div class="form-group" id="slidecontainer">
+                  <input type="range" min="0" step="0.01" max="240" value="50" class="slider" id="myRange" style="width: 250vh;">
+                </div>
+                <div class="form-group" id="initial-time-container">
+                  <label for="initial-time" style="margin-top: 21px; font-size: 20px;">Start Time: </label>
+                  <input type="number" id="initial-time" placeholder="1.0" step="0.01" min="0" max="240">
+                </div>
+
+                <div id="uploadMode" style="display: none;">contribute</div>
                 <input id="upload-input" type="file" name="uploads[]" multiple="multiple"></br>
               </div>
             </div>
             <div class="tab-pane" id="statistics" role="tabpanel">
               <div class="">
-                a lot of cool graphs
+                <h1>COOL GRAPHS</h1>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <br><br><br>
+      <hr>
+      <br>
+      <p style="float:left; margin-bottom: 25px">Hack The North 2017</p>
+      <p style="float:right; margin-bottom: 25px">Coffee House &nbsp;<i class="fa fa-coffee" aria-hidden="true"></i></p><br>
     </div>
 
     <!-- <script type="text/javascript" src='javascripts/profileNav.js'></script> -->
@@ -186,4 +196,6 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="javascripts/upload.js"></script>
 
-<%- include components/footer.ejs %>
+  </body>
+
+</html>
