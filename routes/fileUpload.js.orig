@@ -25,8 +25,8 @@ router.post('/', function(req, res, next) {
    form.on('file', function(field, file) {
      fs.rename(file.path, path.join(form.uploadDir, file.name));
 <<<<<<< Updated upstream
-     console.log(path.join(form.uploadDir, file.name))
-    //  vcs.addToRepo(path.join(form.uploadDir, file.name), req.query.userId, req.query.repoId, file.name)
+     vcs.createNewRepo(req.user.uniqId, req.query.reponame);
+       vcs.addToRepo(path.join(form.uploadDir, file.name), req.user.uniqId, req.query.reponame, file.name)
 =======
      console.log("123")
      console.log(req.user)

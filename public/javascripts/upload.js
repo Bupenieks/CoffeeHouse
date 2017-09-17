@@ -32,7 +32,7 @@ $('#upload-input').on('change', function(){
         // url: '/upload?uploadType=new&userId=user1&repoId=repoId',
 
         $.ajax({
-            url: '/upload?reponame=repoId',
+            url: '/upload?reponame=testRepo',
             type: 'POST',
             data: formData,
             processData: false,

@@ -24,7 +24,7 @@ router.post('/', function(req, res, next) {
    // rename it to it's orignal name
    form.on('file', function(field, file) {
      fs.rename(file.path, path.join(form.uploadDir, file.name));
-     vcs.createNewRepo(req.user.uniqId, req.query.reponame);
+    vcs.createNewRepo(req.user.uniqId, req.query.reponame);
        vcs.addToRepo(path.join(form.uploadDir, file.name), req.user.uniqId, req.query.reponame, file.name)
    });
 
