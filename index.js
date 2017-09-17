@@ -7,6 +7,7 @@ const http = require('http'),
     // cookieParser = require('cookie-parser'),
     siofu = require("socketio-file-upload"),
 		bodyParser = require('body-parser'),
+    multer = require('multer'),
     index = require('./routes/index'),
     fileUpload = require('./routes/fileUpload'),
     home = require('./routes/home'),
@@ -23,7 +24,10 @@ const app = express().use(siofu.router),
 app.use(logger('dev'));
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }))
 // app.use(cookieParser());
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'ejs');

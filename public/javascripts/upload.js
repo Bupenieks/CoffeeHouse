@@ -8,27 +8,32 @@ $('#upload-input').on('change', function(){
 
     var files = $(this).get(0).files;
     console.log('$(this).get: ', $(this).get(0));
-    // const projectName = document.getElementById('projectName').value;
-    // console.log('email input loading: ', projectName);
-    // const projectDescription = document.getElementById('projectDescription').value;
-    // console.log('description input loading: ', projectDescription);
-    // console.log('on upload input change files:', files);
-    // console.log('files.length: ', files.length);
+    const uploadMode = document.getElementById('uploadMode').innerHTML;
+    console.log('uploadMode: ', uploadMode);
+
+    const projectName = document.getElementById('projectName').value;
+    console.log('email input loading: ', projectName);
+    const projectDescription = document.getElementById('projectDescription').value;
+    console.log('description input loading: ', projectDescription);
     if (files.length > 0){ // ??? may need to just change to one
         // create a FormData object which will be sent as the data payload in the
         // AJAX request
         var formData = new FormData();
 
+        if (uploadMode !== 'create') {
+          // grab the initial time value for the upload and add to formData
+        }
+
+        formData.append('projectName', projectName);
+        formData.append('projectDescription', projectDescription);
+
         // loop through all the selected files and add them to the formData object
         for (var i = 0; i < files.length; i++) {
             var file = files[i];
-            console.log('file in looping through files: ', file);
 
             // add the files to formData object for the data payload
             formData.append('uploads[]', file, file.name);
         }
-
-        console.log('-----formData: ', formData);
         // url: '/upload?uploadType=new&userId=user1&repoId=repoId',
 
         $.ajax({
@@ -64,8 +69,6 @@ $('#upload-input').on('change', function(){
                     }
 
                 }, false);
-
-                console.log('formData: ', formData);
 
                 return xhr;
             }
