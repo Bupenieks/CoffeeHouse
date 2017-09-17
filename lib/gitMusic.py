@@ -9,8 +9,8 @@ base_track_file = sys.argv[2]
 overlay_track_file = sys.argv[3]
 pos = sys.argv[4]
 
-base_track = AudioSegment.from_file(path + base_track_file,format=base_track_file[::-1][:base_track_file[::-1].find("."):-1])
-overlay_track = AudioSegment.from_file(path + overlay_track_file,format=overlay_track_file[::-1][:overlay_track_file[::-1].find("."):-1])
+base_track = AudioSegment.from_file(path + base_track_file,format=base_track_file[base_track_file.rfind('.')+1:])
+overlay_track = AudioSegment.from_file(path + overlay_track_file,format=overlay_track_file[overlay_track_file.rfind('.')+1:])
 
 if (pos < 0):
     merge_track = AudioSegment.silent(duration = len(base_track) - pos)
@@ -19,5 +19,5 @@ if (pos < 0):
 else:
     merge_track = base_track.overlay(overlay_track,position=pos)
     
-file_handle = merge_track.export(export_path + "merged_" + base_track_file[::-1][:base_track_file[::-1].find("."):-1] + "_" + overlay_track_file[::-1][:overlay_track_file[::-1].find("."):-1] + ".mp3",format="mp3")
+file_handle = merge_track.export(export_path + "merged_" + base_track_file[:base_track_file.rfind('.')] + "_" + overlay_track_file[|:overlay_track_file.rfind('.')] + ".mp3",format="mp3")
 sys.exit(0)

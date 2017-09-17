@@ -233,3 +233,8 @@ form  {
 .pCreated {
   color: #333;
 }
+
+.nav-link.active {
+  background-color: #f6f6f6 !important;
+  border-color: #ddd #ddd #f6f6f6 !important;
+}
