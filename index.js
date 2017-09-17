@@ -16,7 +16,6 @@ const http = require('http'),
     profile = require('./routes/profile'),
     signup = require('./routes/signup'),
     login = require('./routes/login'),
-    users = require('./users'),
     favicon = require('serve-favicon');
 
 const expressValidator = require('express-validator');

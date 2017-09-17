@@ -11,7 +11,7 @@ router.get("/:username", function(req, res, next) {
   if (res.locals.user) {
   var theUser = vcs.getJSON(req.params.username);
   res.render('profile', { profile: theUser });
-}
+  }
 });
 
 
