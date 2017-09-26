@@ -126,7 +126,6 @@ io.on("connection", function(socket){
 */
 
 app.get('/test/', (req, res) => {
-    console.log("TEST")
     const PythonShell = require('python-shell')
 
     PythonShell.defaultOptions = {
@@ -136,15 +135,19 @@ app.get('/test/', (req, res) => {
     var options = {
         mode: 'text',
         pythonOptions: ['-u'],
-        args: ['./public', './public/users/11e8ec80-e21a-4257-bc08-6d070c16ba73/08/e.mp3', 'public/users/11e8ec80-e21a-4257-bc08-6d070c16ba73/08/f.mp3']
+        //scriptPath: '/Users/Ben/Desktop/github/GithubMusic/lib/mp3_merge.py',
+        args: ['./public', "./uploads/bryson1.mp3", "./uploads/q.mp3", ""]
     }
 
 
     PythonShell.run('gitMusic.py', options, (err, results) => {
-        console.log(results);
-        res.send(results)
+        console.log("!@#$!@#$!@")
+        console.log(results)
+        /*ncp(results[0], "./public/users/" + this.owner + "/" + this.id, () => {
+            console.log("HERE12345")
+        })*/
     })
-
+    console.log("pushed:")
 })
 
 server.listen(app.get('port'), () => {
