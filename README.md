@@ -1,4 +1,4 @@
-# CoffeeHouse
+# CoffeeHouse (WIP)
 CoffeeHouse is a medium for musicians to collaborate, experiment and create open-source music.
 
 ![screen shot 2017-09-26 at 11 56 18 am](https://user-images.githubusercontent.com/22259451/30870868-10ac1eea-a2b3-11e7-997b-86ae07e0921e.png)
