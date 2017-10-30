@@ -11,3 +11,7 @@ They can then advertise their song to other musicians, for them to clone, add, r
 ![screen shot 2017-09-26 at 12 03 18 pm](https://user-images.githubusercontent.com/22259451/30870937-33000be6-a2b3-11e7-9316-72fd6debf120.png)
 
 From there, the original creator can see all the different contributions and modifications made to their base track.
+
+---
+
+This project was made for Hack The North 2017.
